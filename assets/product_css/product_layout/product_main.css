@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+}
+
+.header__picture {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 331.01px;
+  height: 331.01px;
+  background-color: aqua;
+}
+
+.header__picture img {
+  width: 100%; /*331.01px*/
+}
+
+/*.fuzzy__area {
+  position: relative;
+
+}*/
+
+.header__picture img[alt*='picture01'] {
+  position: relative;
+  z-index: 0;
+}
+
+.header__picture img[alt*='picture02'] {
+  position: absolute;
+  z-index: 1;
+  width: 289.8px;
+}
+
+.song__title {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+}
+
+.song__name p:nth-of-type(1) {
+  font-size: 64px;
+}
+
+.song__name p:nth-of-type(2) {
+  font-size: 28px;
+}
+
+img[alt*='beat-icon'] {
+  height: 40px;
+}
+
+.active__like {
+  display: flex;
+  margin-left: 50px;
+}
+
+.white__love {
+  display: block;
+}
+
+.white__love.active {
+  display: none;
+  background-color: brown;
+}
+
+.pink__love {
+  display: block;
+}
+
+.pink__love.active {
+  display: none;
+}
+
+.like__number {
+  display: flex;
+}
+
+img[alt*='pink-love'],
+img[alt*='share'],
+img[alt*='white-love'],
+img[alt*='play-btn'] {
+  height: 48.43px;
+}
+
+.like__number p {
+  font-size: 48.43px;
+}
+
+.cart > p {
+  font-size: 40px;
+}
+
+.cart > span > p {
+  font-size: 24.65px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: aliceblue;
+}

@@ -1,0 +1,473 @@
+/*.main {
+  border: 1px solid red;
+}
+.main__list {
+  border: 1px solid white;
+}
+.main__music__title {
+  border: 1px solid red;
+}
+.main__music {
+  border: 1px solid white;
+}
+.main__music__content {
+  background-color: brown;
+}
+@media screen and (min-width: 1194px) {
+  .main__music__content > section {
+    border: 1px solid white;
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 1194px) and (min-width: 428px) {
+  .main__music {
+    border: 1px solid white;
+  }
+  .main__music__content > section {
+    border: 1px solid white;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__music__content > section {
+    border: 1px solid white;
+  }
+}
+*/
+
+.main {
+  display: flex;
+  width: 100%;
+  margin-top: 1.29vh;
+}
+
+@media screen and (min-width: 1194px) {
+  .main {
+    height: calc(75vh - 65px);
+  }
+
+  .main__list {
+    width: 132px;
+    align-items: flex-start;
+    margin-right: 79px;
+  }
+
+  .main__list__title {
+    font-size: 170%;
+  }
+
+  .main__list__button a > span {
+    width: 90px;
+    height: 90px;
+  }
+
+  .main__music {
+    margin-right: 2.7%;
+    margin-top: 4.8vh;
+  }
+
+  .main__music__title p {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1194px) and (min-width: 1000px) {
+  .main {
+    height: calc(76vh - 65px);
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 428px) {
+  .main {
+    height: calc(82vh - 65px);
+  }
+}
+
+@media screen and (max-width: 1194px) and (min-width: 428px) {
+  .main__list {
+    width: 88px;
+    align-items: flex-start;
+    margin-right: 40px;
+  }
+
+  .main__list__title {
+    font-size: 125%;
+  }
+
+  .main__list__button a > span {
+    width: 80px;
+    height: 80px;
+  }
+
+  .main__music {
+    margin-right: 2.7%;
+    margin-top: 4.8vh;
+  }
+
+  .main__music__title p {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .main {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(82vh - 65px);
+    margin-top: 0;
+  }
+
+  .main__list {
+    align-items: center;
+    height: 135px;
+  }
+
+  .main__list__title {
+    font-size: 1.9rem;
+  }
+
+  .main__list__button a > span {
+    width: 62px;
+    height: 62px;
+  }
+
+  .main__list__button a {
+    font-size: 14.66px;
+  }
+
+  .main__music__title p {
+    margin-right: 16px;
+  }
+}
+
+.main__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__list__title {
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+@media screen and (max-width: 1463px) and (min-width: 1194px) {
+  .main__list__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 428px) {
+  .main__list__button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .main__list__button::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__music__title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1093px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .main__list__button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+
+  .main__music__title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1093px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+}
+
+.main__list__button a > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.8vh;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  background-size: cover;
+  opacity: 0.5;
+  transition: opacity 250ms;
+  cursor: pointer;
+}
+
+.main__list__button a > span:hover {
+  opacity: 1;
+}
+
+.playlist01 {
+  background-image: url('../../images/playlist-button/Recommended\ \(1\).webp');
+}
+.playlist02 {
+  background-image: url('../../images/playlist-button/beat\ \(2\).webp');
+}
+.playlist03 {
+  background-image: url('../../images/playlist-button/vocal\ \(2\).webp');
+}
+.playlist04 {
+  background-image: url('../../images/playlist-button/effects\ \(2\).webp');
+}
+
+.playlist01.active,
+.playlist02.active,
+.playlist03.active,
+.playlist04.active {
+  opacity: 1;
+}
+
+.main__music {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+#recommended__area > span > p {
+  font-size: 1.5rem;
+  width: 96px;
+}
+
+#beat__area > span > p {
+  font-size: 1.5rem;
+  width: 52px;
+}
+
+#vocal__area > span > p {
+  font-size: 1.5rem;
+  width: 65px;
+}
+
+#effects__area > span > p {
+  font-size: 1.5rem;
+  width: 75px;
+}
+
+.main__music__title > span {
+  width: 88%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.main__music__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.main__music__content section {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 250px;
+  border: 1px solid #8080800f;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 1px rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (min-width: 1194px) {
+  .main__music__content > section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 208.142px;
+    min-height: 255.45px;
+    margin-right: 5%;
+    margin-bottom: 30.85px;
+  }
+
+  .main__music__content > section > a > div {
+    margin-top: 10px;
+    width: 130px;
+    height: 150px;
+  }
+
+  .main__music__content img[alt*='picture'] {
+    margin-top: -35px;
+    width: 141.91px;
+    height: 132.83px;
+  }
+
+  .main__music__content__text {
+    position: absolute;
+    top: 100px;
+    left: -8px;
+    line-height: 1.3rem;
+  }
+
+  .main__music__content__btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img[alt*='playIcon'] {
+    position: absolute;
+    top: -98px;
+    right: 30px;
+    width: 41px;
+  }
+
+  img[alt*='cart'] {
+    width: 41px;
+  }
+
+  .main__music__content__text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1194px) and (min-width: 428px) {
+  .main__music__title {
+    position: relative;
+  }
+
+  .main__music__content {
+    flex-wrap: wrap;
+  }
+
+  .main__music__content > section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 186.43px;
+    min-height: 208.23px;
+    margin-right: 3.5%;
+    margin-bottom: 30.75px;
+  }
+
+  .main__music__content > section > a > div {
+    width: 130px;
+    height: 150px;
+    margin-top: 15.69px;
+  }
+
+  .main__music__content img[alt*='picture'] {
+    width: 121.96px;
+    height: 97.83px;
+  }
+
+  .main__music__content__text {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    line-height: 1.3rem;
+  }
+
+  .main__music__content__btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img[alt*='playIcon'] {
+    position: absolute;
+    top: -130px;
+    right: 30px;
+    width: 41px;
+  }
+
+  img[alt*='cart'] {
+    width: 41px;
+  }
+
+  .main__music__content__text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .main__music__content {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .main__music__content > section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 147.89px;
+    height: 215.25px;
+    margin-bottom: 8px;
+  }
+
+  .main__music__content img[alt*='picture'] {
+    width: 97.02px;
+    height: 91.13px;
+  }
+
+  img[alt*='playIcon'] {
+    position: absolute;
+    top: -120px;
+    right: 20px;
+    width: 37.31px;
+  }
+
+  img[alt*='cart'] {
+    width: 37.31px;
+  }
+
+  .main__music__content__text {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+  }
+
+  .main__music__content__text p {
+    font-size: 13.56px;
+  }
+
+  .main__music__content__btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main__music__content > section > a > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__music__content__text > span {
+  display: flex;
+}
+
+.main__music__content__text > span p {
+  color: #f9d760;
+  margin-right: 4px;
+}
+
+.main__music__content__text p {
+  line-height: 1.2rem;
+}
