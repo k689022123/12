@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #3e434b;
+        color: white;
+
+        perspective: 500px;
+      }
+      .header {
+        width: 80%;
+        max-width: 1200px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        margin: auto;
+      }
+
+      .header__container {
+        flex: 1;
+      }
+
+      .header sub {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .header h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+
+      .header p {
+        font-size: 1.25rem;
+        letter-spacing: 3px;
+        line-height: 1.5;
+      }
+
+      .header a {
+        display: inline-block;
+        margin-top: 35px;
+        padding: 20px 40px;
+        font-size: 1.15rem;
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        border: 1px solid #e9eaf4;
+      }
+
+      .header__cover {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*box-sizing: border-box;*/
+        margin-left: 5rem;
+        width: 600px;
+        height: 600px;
+        border: 6px solid #e9eaf4;
+        border-radius: 50%;
+        background-color: white;
+        animation: scaleElement 1.5s ease-in-out alternate infinite;
+      }
+
+      .header__cover::before,
+      .header__cover::after {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        border: 6px solid #e9eaf4;
+        border-radius: 50%;
+        animation: rotateElement 1.5s ease-in-out infinite;
+        border-top-color: transparent; /*讓上面的邊透明*/
+        border-bottom-color: transparent;
+      }
+
+      .header__cover::after {
+        width: 105%;
+        height: 105%;
+        animation-delay: 0.5s;
+        animation-direction: reverse;
+      }
+
+      .header__cover img {
+        width: 100%;
+      }
+
+      @keyframes scaleElement {
+        100% {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes rotateElement {
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <article class="header__container">
+        <sub>小標題文字</sub>
+        <h1>大標題文字</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <a href="#">CLICK ME!</a>
+      </article>
+      <aside class="header__cover">
+        <img src="demo.png" alt="圖片展示" />
+      </aside>
+    </header>
+  </body>
+</html>
